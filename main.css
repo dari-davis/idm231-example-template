@@ -1,7 +1,6 @@
 body {
     margin: 20px;
     background: #000;
-    /* transition on change */
     opacity: 1;
     transition: opacity 3s;
 }
@@ -31,7 +30,6 @@ body.blackScreen {
     margin: 0 auto;
 }
 
-
 .zButton {
     margin: 0 10px;
     height: 80px;
@@ -47,26 +45,14 @@ body.blackScreen {
    transform: rotate(10deg);
 }
 
-#trumpet {
+#Sco {
     background-image: url('/img/trumpet_small.png');
 }
 
-#saxophone {
+#Aqu {
     background-image: url('/img/saxophone_small.png');
 }
 
-#guitar {
+#Pis {
     background-image: url('/img/guitar_small.png');
-}
-
-#display {
-    opacity: 0;
-    height: 0;
-    transition: none;
-}
-
-#display.visible {
-    opacity: 1;
-    height: 300px;
-    transition: 3s;
 }
