@@ -16,24 +16,55 @@ body.blackScreen {
     margin: 0 auto;
     padding: 20px;
     max-width: 1280px;
-    background-color: #fed000;
+    background-color: #eee;
     margin: 10px auto;
 }
 
 #display {
     display: flex;
-    margin: 20px auto;
-    max-width: 300px;
+    margin: 10px auto 20px;
+    max-width: 250px;
+    opacity: 0.5;
+}
+
+.modal #zImage {
+    max-width: 100px;
+}
+
+h3 {
+    margin-top: 0;
+    font-family: sans-serif;
+    text-align: center;
 }
 
 #middle {
     margin: 0 auto;
 }
 
+#userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#userInfo div {
+    margin-bottom: 5px;
+}
+
+#userSubmit {
+    padding: 8px 24px;
+    background: #000;
+    font-size: 12px;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
 .zButton {
     margin: 0 10px;
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
     border: 0;
     background-color: transparent;
     background-image: url('/img/trumpet_small.png');

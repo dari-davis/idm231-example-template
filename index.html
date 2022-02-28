@@ -4,15 +4,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fun with Functions and Objects!</title>
+  <title>Which Instrument Are You?</title>
   <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="screen.css" />
 </head>
 <body class="blackScreen" onload="fade2Content();">
   <div id="wrapper">
+    <h3>Which Instrument Are You?</h3>
     <div id="userInfo">
-      <p><input id="name" type="text" placeholder="First Name"></p>
-      <p><input id="bday" type="date"></p>
-      <p><button id="userSubmit">Submit</button></p>
+      <div><input id="name" type="text" placeholder="First Name"></div>
+      <div><input id="bday" type="date"></div>
+      <div><button id="userSubmit">Enter</button></div>
     </div>
     <div>
       <img id="display" src="img/blank.png" alt="blank"/>
@@ -22,8 +24,19 @@
       <button class="zButton" id="Aqu"></button>
       <button class="zButton" id="Pis"></button>
     </div>
-    <div id="bottom"></div>
+    <div id="modal" class="modal" hidden>
+      <div class="modal-body">
+        <div class="modal-content">
+          <div><p><span id="zInstrument">You are an instrument!</span> <span id="zDate">###</span></p></div>
+          <img id="zImage" src="img/blank.png" alt="blank"/>
+          <p id="zDescription">This is a description.</p>
+          <button id="btn-modal-close" class="toggle-modal">Close</button>
+        </div>
+      </div>
+      <div class="blanket"></div>
+    </div>
   </div>
+  <audio id="speakers"></audio>
   <script src="main.js"></script>
 </body>
 </html>

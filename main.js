@@ -1,9 +1,4 @@
-//
-//
-//
-//
 function fade2Content() {
-    //console.log('fade2Content called');
     document.body.classList.remove("blackScreen");
 }
 
@@ -26,24 +21,41 @@ guitarBtn.addEventListener('click', function() {
 });
 
 function userPicked(buttonName) {
-    console.log('User picked ' + buttonName);
+    //console.log('User picked ' + buttonName);
+    const zInstrument = document.getElementById('zInstrument');
+    const zImage = document.getElementById('zImage');
+    const zDescription = document.getElementById('zDescription');
 
     switch (buttonName) {
         case 'Sco':
-            console.log('trumpet was clicked');
-            displayObj.src = 'img/trumpet.png';
-            displayObj.classList.add('visible');
+            //console.log('trumpet was clicked');
+            speakers.src = `sounds/bullet.mp3`;
+            speakers.play();
+            zImage.src = 'img/trumpet.png';
+            zInstrument.innerHTML = "You are a trumpet!";
+            zDescription.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus tortor sit amet sem pellentesque posuere."
+            modal.hidden = !modal.hidden;
         break;
         case 'Aqu':
-            console.log('saxophone was clicked');
-            displayObj.src = 'img/saxophone.png';
+            //console.log('saxophone was clicked');
+            speakers.src = `sounds/bullet.mp3`;
+            speakers.play();
+            zImage.src = 'img/saxophone.png';
+            zInstrument.innerHTML = "You are a saxophone!";
+            zDescription.innerHTML = "Donec accumsan est sed maximus efficitur. Donec vitae eros commodo orci dictum auctor."
+            modal.hidden = !modal.hidden;
         break;
         case 'Pis':
-            console.log('guitar was clicked');
-            displayObj.src = 'img/guitar.png';
+            //console.log('guitar was clicked');
+            speakers.src = `sounds/bullet.mp3`;
+            speakers.play();
+            zImage.src = 'img/guitar.png';
+            zInstrument.innerHTML = "You are a guitar!";
+            zDescription.innerHTML = "Vivamus efficitur leo et malesuada interdum. Morbi porttitor leo nulla, et venenatis ex posuere eu."
+            modal.hidden = !modal.hidden;
         break;
         default:
-            console.log('A button was clicked!');
+            //console.log('A button was clicked!');
     }
 
 }
@@ -100,3 +112,12 @@ userSubmitBtn.addEventListener('click', function() {
     console.log(AstroSign);
     userPicked(AstroSign);
 });
+
+// Modal Functionality
+const modal = document.getElementById('modal');
+const modalCloseBtn = document.getElementById('btn-modal-close');
+modalCloseBtn.addEventListener('click', function() {
+    console.log('modal close clicked!');
+    modal.hidden = !modal.hidden;
+});
+
